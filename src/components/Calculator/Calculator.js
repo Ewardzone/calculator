@@ -1,3 +1,4 @@
+import { evaluate } from 'mathjs';
 import React, { useState } from "react";
 import CalculatorContainer from "./CalculatorContainer";
 import Screen from "../Display/Display";
@@ -15,7 +16,7 @@ const Calculator = () => {
   };
 
   const handleEqual = () => {
-    setResult(eval(result));
+    setResult(evaluate(result));
   };
 
   return (
